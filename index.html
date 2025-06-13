@@ -1,24 +1,155 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的静态网站</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background: #f5f5f5;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一纸一世界 - 印艺高品质生活</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <h1>欢迎来到我的 GitHub Pages 网站！</h1>
-  <p>这是一个静态页面示例。</p>
+
+    <!-- ======== 页头 Header ======== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">LOGO</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="html/about us.html">关于我们</a></li>
+                    <li><a href="html/products.html">产品</a></li>
+                    <li><a href="html/company strenth .html">公司实力</a></li>
+                    <li><a href="html/news.html">新闻中心</a></li>
+                    <li><a href="html/contanct us.html">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <i class="fa-solid fa-phone"></i>
+                <span>400-611-2158</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======== Banner区域 ======== -->
+        <section class="banner" >
+            <div class="slider">
+                <div class="slides" id="slides">
+                    <img src="images/index/banner/banner1.jpg" alt="Banner 1">
+                    <img src="images/index/banner/banner2.jpg" alt="Banner 2">
+                    <img src="images/index/banner/banner3.jpg" alt="Banner 3">
+                </div>
+                <div class="dots" id="dots"></div>
+            </div>
+        
+        </section>
+
+        <!-- ======== 业务范围 Scope of Business ======== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>SCOPE OF BUSINESS</h2>
+                    <p>业务范围</p>
+                </div>
+                <div class="grid-4">
+                    <div class="scope-card">
+                        <img src="images/index/main/gift.jpg" alt="包装印刷">
+                        <h3>包装印刷</h3>
+                        <p>附（宣传画册、VI设计、包装印刷、广告设计等系列产品）...</p>
+                    </div>
+                    <div class="scope-card">
+                        <img src="images/index/main/haibao.jpg" alt="标准样品">
+                        <h3>标准样品</h3>
+                        <p>附（宣传画册、VI设计、包装印刷、广告设计等系列产品）...</p>
+                    </div>
+                    <div class="scope-card">
+                        <img src="images/index/main/paper.jpg" alt="海报与展览">
+                        <h3>海报与展览</h3>
+                        <p>附（宣传画册、VI设计、包装印刷、广告设计等系列产品）...</p>
+                    </div>
+                    <div class="scope-card">
+                        <img src="images/index/main/ping.jpg" alt="平面设计">
+                        <h3>平面设计</h3>
+                        <p>附（宣传画册、VI设计、包装印刷、广告设计等系列产品）...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ======== 公司简介 Company Profile ======== -->
+        <section class="section section-profile" style="background-image: url('https://via.placeholder.com/1920x400/F0E68C/333?text=Profile+BG');">
+            <div class="container">
+                <div class="profile-content">
+                    <div class="section-title text-left">
+                        <h2>COMPANY PROFILE</h2>
+                        <p>公司简介</p>
+                    </div>
+                    <p>上海鹤翔印务技术有限公司引进了德国最新海德堡对开、四开、八开四色胶印机... 为广大客户提供高品质、专业化、快捷的全面印刷解决方案。</p>
+                    <a href="#" class="btn btn-primary">查看更多</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 客户案例 Customer Cases ======== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>CUSTOMER CASES</h2>
+                    <p>我们都案例</p>
+                </div>
+                <div class="tabs">
+                    <button class="tab-link active">包装与品牌</button>
+                    <button class="tab-link">海报与展览</button>
+                    <button class="tab-link">平面设计</button>
+                </div>
+                <div class="grid-4 case-gallery">
+                    <img src="images/index/main/gift.jpg" alt="案例1">
+                    <img src="images/index/main/haibao.jpg" alt="案例2">
+                    <img src="images/index/main/paper.jpg" alt="案例3">
+                    <img src="images/index/main/ping.jpg" alt="案例4">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======== 页脚 Footer ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <div class="footer-item">
+                    <div class="icon-bg green"><i class="fa-solid fa-volume-high"></i></div>
+                    <div class="footer-links">
+                        <a href="#">我国特种纸印刷技术领先世界 <span>[ 2016-07-19 ]</span></a>
+                        <a href="#">如何用特种纸张印刷出高品质画册 <span>[ 2016-07-19 ]</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                 <div class="footer-item">
+                    <div class="icon-bg red"><i class="fa-solid fa-building"></i></div>
+                    <div class="footer-contact">
+                        <p>电话：021-12345678</p>
+                        <p>邮箱：2840m.xiang@12345.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                 <div class="footer-item">
+                     <div class="footer-contact">
+                         <p>地址：上海市松江xxxxx</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
+
