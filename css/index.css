@@ -81,9 +81,16 @@ ul {
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
+    /* 我们可以让它变成一个flex容器，以便更好地控制图片 */
+    display: inline-block; /* 或者 display: block; */
+}
+.logo img{
+   max-width:80px;
+   width:100%;
+   height:auto;
+   vertical-align: middle;
+   position:relative;
+   right:400%;
 }
 
 .main-nav ul {
@@ -131,7 +138,7 @@ ul {
 .banner {
     height: 100%;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1925px;
     margin: 0 auto;
     background-size: cover;
     background-position: center;
@@ -204,19 +211,22 @@ ul {
 }
 
 .section-profile {
+    max-width:1920px;
+    height: auto;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #0c0101;
+    margin: 0 auto; 
 }
 .profile-content {
-    max-width: 50%;
+    max-width: 100%;
 }
 .section-profile .section-title {
     text-align: left;
 }
 .profile-content .section-title h2, 
 .profile-content .section-title p {
-    color: #fff;
+    color: #0c0c0c;
 }
 .profile-content > p {
     margin-bottom: 30px;

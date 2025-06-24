@@ -81,9 +81,14 @@ ul {
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
+     /* 我们可以让它变成一个flex容器，以便更好地控制图片 */
+     display: inline-block; /* 或者 display: block; */
+}
+.logo img{
+    max-width:150px;
+    width:100%;
+    height:auto;
+    vertical-align: middle;
 }
 
 .main-nav ul {
