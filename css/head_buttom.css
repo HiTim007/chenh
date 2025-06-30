@@ -4,8 +4,6 @@
     --dark-text: #333;
     --light-text: #999;
     --bg-light-gray: #f8f8f8;
-    --green-accent: #28b072;
-    --red-accent: #e84c3d;
 }
 
 * {
@@ -35,9 +33,8 @@ ul {
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .section {
-    padding: 60px 0;
+    padding: 100px 0;
 }
 
 .section-title {
@@ -63,7 +60,6 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
-
 /* ======== 页头 Header ======== */
 .header {
     background-color: #fff;
@@ -76,19 +72,22 @@ ul {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.logo a {
-     /* 我们可以让它变成一个flex容器，以便更好地控制图片 */
-     display: inline-block; /* 或者 display: block; */
-}
-.logo img{
-    max-width:150px;
+.logo img {
+    max-width:80px;
     width:100%;
     height:auto;
     vertical-align: middle;
+    position:relative;
+    right:400%;
+}
+
+/* ======== 导航栏 ======== */
+.main-nav {
+    margin-left: auto; /* FIX: 使用flexbox自动推到右边 */
+    margin-right: 30px; /* 和右侧电话留出间距 */
 }
 
 .main-nav ul {
@@ -96,6 +95,7 @@ ul {
 }
 
 .main-nav li a {
+    display: block;
     padding: 10px 20px;
     font-size: 16px;
     position: relative;
@@ -127,9 +127,58 @@ ul {
 .header-contact {
     color: var(--primary-color);
     font-size: 18px;
+    display: flex;
+    align-items: center;
 }
+
 .header-contact i {
     margin-right: 8px;
+}
+
+/*--------- FIX: 修正后的下拉列表样式 ----------*/
+.main-nav li.has-dropdown {
+    position: relative;
+}
+
+/* --- FIX: 新的水平布局规则 --- */
+.has-dropdown .dropdown-menu {
+    display:none; /* 默认隐藏，这个不变 */
+    position: absolute;
+    top: 100%;
+    
+    /* 关键：水平居中定位 */
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 25px; /* 设置各项之间的间距 */
+    /* 调整外观 */
+    background-color: #fff;
+    padding: 15px 25px; /* 调整内边距，左右多一些 */
+    border-radius: 8px; /* 圆角可以更圆润一些 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 阴影可以更柔和 */
+    white-space: nowrap; /* 防止内容换行 */
+    z-index: 100;
+}
+
+.has-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: auto;
+}
+
+.dropdown-menu a {
+    padding: 12px 20px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+}
+
+.dropdown-menu a::after {
+    display: none; /* 下拉菜单项不需要下划线动画 */
 }
 
 /* ======== 页脚 Footer ======== */
@@ -139,49 +188,35 @@ ul {
     font-size: 14px;
 }
 
-.footer .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #eee;
-}
-
-.footer-item {
-    display: flex;
-    align-items: flex-start;
-}
-
-.icon-bg {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.footer-contact-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-    margin-right: 15px;
-    flex-shrink: 0;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
 }
-.icon-bg.green { background-color: var(--green-accent); }
-.icon-bg.red { background-color: var(--red-accent); }
 
-.footer-links a {
-    display: block;
-    margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
     color: var(--light-text);
+    font-size: 16px;
 }
-.footer-links a:hover { color: var(--primary-color); }
-.footer-links span {
-    float: right;
-    margin-left: 10px;
+
+.contact-item i {
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    margin-right: 8px;
+    color: #b0b0b0;
 }
-.footer-contact p {
-    color: var(--light-text);
-    margin-bottom: 5px;
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .copyright {
@@ -189,4 +224,20 @@ ul {
     padding: 20px 0;
     color: var(--light-text);
     font-size: 12px;
+}
+/* ======== 响应式调整：针对手机等小屏幕 ======== */
+@media (max-width: 768px) {
+    .footer-contact-wrapper {
+        flex-direction: column; /* 将两列垂直堆叠 */
+        align-items: center; /* 让所有内容在页面中居中 */
+        gap: 30px; /* 减小堆叠后的间距 */
+    }
+
+    .contact-column {
+        text-align: center; /* 在垂直布局时，让内容居中可能更好看 */
+    }
+
+    .contact-item {
+        justify-content: center; /* 确保图标和文字整体居中 */
+    }
 }

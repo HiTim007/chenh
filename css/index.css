@@ -1,68 +1,4 @@
-/* ======== 全局和重置样式 ======== */
- :root {
-    --primary-color: #f37321;
-    --dark-text: #333;
-    --light-text: #999;
-    --bg-light-gray: #f8f8f8;
-    --green-accent: #28b072;
-    --red-accent: #e84c3d;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
-    color: var(--dark-text);
-    background-color: #fff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.section {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    font-size: 28px;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: var(--dark-text);
-}
-
-.section-title p {
-    font-size: 18px;
-    color: var(--light-text);
-    margin-top: 5px;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
 
 /* ======== 页头 Header ======== */
 .header {
@@ -183,15 +119,6 @@ ul {
   .dots span.active {
     opacity: 1;
   }
-/*.banner-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.banner-content p {
-    font-size: 24px;
-    margin-top: 10px;
-}*/
 
 /* ======== 首页特定样式 ======== */
 .scope-card {
@@ -337,11 +264,4 @@ ul {
 .footer-contact p {
     color: var(--light-text);
     margin-bottom: 5px;
-}
-
-.copyright {
-    text-align: center;
-    padding: 20px 0;
-    color: var(--light-text);
-    font-size: 12px;
 }
