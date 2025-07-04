@@ -14,46 +14,22 @@
     position: relative;
     
 }
-.section_title{
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+
+.page-title-bar{
+    padding: 0 15px;
+    margin: 0;
     background-color:#f7f7f7;
-    padding:0;
-    box-sizing: border-box; /* 确保padding不增加总宽度 */
 }
-.section_title h3{
-    font-size: 25px;
-    font-weight: bold;
-    color:#fff;
-    background-color:#f77400;
-    /* 清除继承的宽度/高度 */
-    width: auto;    /* 或 initial / unset */
-    height: auto;   /* 或 initial / unset */
-    
-    /* 允许内容决定尺寸 */
-    display: inline-block; /* 或 inline */
-    
-    /* 重置可能影响的内外边距 */
-    margin: 0;      /* 根据设计调整 */
-    padding: 10px;     /* 根据设计调整 */
-    
-    /* 防止文本换行（可选） */
-    white-space: nowrap;
-    /*缩进*/
-    margin-left: 35%
-}
-.section_content{
+.container{
+    max-width: 1200px;
     display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 30px auto;
 }
-.section_content p{
-    font-size: 20px;
-    width: 100%;
-    height: 100%;
+.page-title-bar .container h3{
+    color: #fff;
+    background-color: #f77400;
+    padding: 0 15px;
+    /*text-align: center;*/
+    white-space: nowrap;/*文本不换行*/
+    overflow: hidden;/*文本溢出容器时，隐藏溢出的部分*/
+    text-overflow: ellipsis;/*把隐藏的部分用三个点代替，让人知道有内容被隐藏*/
 }
