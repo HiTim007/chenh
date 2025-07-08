@@ -24,12 +24,22 @@
     max-width: 1200px;
     display: flex;
 }
-.page-title-bar .container h3{
+.page-title-bar .container h2{
     color: #fff;
     background-color: #f77400;
-    padding: 0 15px;
+    padding: 15px 30px;
     /*text-align: center;*/
     white-space: nowrap;/*文本不换行*/
     overflow: hidden;/*文本溢出容器时，隐藏溢出的部分*/
     text-overflow: ellipsis;/*把隐藏的部分用三个点代替，让人知道有内容被隐藏*/
+}
+.container p{
+    padding: 60px 0px;
+    max-width: 70%;
+    font-size: 20px;
+    line-height: 2;
+}
+.content_img img{
+    padding: 30px;
+   max-width: 80%;
 }

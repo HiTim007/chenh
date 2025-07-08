@@ -129,7 +129,7 @@
     margin-bottom: 15px;
 }
 .scope-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 .scope-card p {
@@ -157,6 +157,8 @@
 }
 .profile-content > p {
     margin-bottom: 30px;
+    line-height: 2;
+    
 }
 
 .btn {
